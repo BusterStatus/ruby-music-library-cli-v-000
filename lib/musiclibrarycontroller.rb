@@ -1,9 +1,12 @@
 class MusicLibraryController
   
+<<<<<<< HEAD
   attr_reader :name, :artist, :genre
   
   @@list_songs = [0]
   
+=======
+>>>>>>> 68d101f621550c0b8863ff2520aae12ceb71d19e
   def initialize(path="./db/mp3s")
     @path = path
     music_importer_object = MusicImporter.new(path)
@@ -20,6 +23,7 @@ class MusicLibraryController
     puts "To play a song, enter 'play song'."
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
+<<<<<<< HEAD
     user_input = gets.strip
     if user_input != "exit"
       call
@@ -104,6 +108,10 @@ class MusicLibraryController
     elsif command === "play song"
       play_song
     end
+=======
+    a = gets.chomp
+    gets.chomp until a === "exit"
+>>>>>>> 68d101f621550c0b8863ff2520aae12ceb71d19e
   end
   
 end
